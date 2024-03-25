@@ -1,0 +1,669 @@
+import random
+char = ["zeus", "hera", "aphrodite", "apollo", "ares", "artemis", "athena", "hades", "hermes", "poseidon", "demeter", "hephaestus", "hestia", "helios", "hercules", "helen", "jason", "orion", "perseus"]
+score = 0
+maxScore = 0
+def replay():
+    c = input("Would you like to play again? (Y)es or (N)o").lower()
+    if c == "y":
+        main()
+    else:
+        global score
+        global maxScore
+        score = str(score)
+        maxScore = str(maxScore)
+        print("Game over. You ended up with a score of " + score + " out of " + maxScore)
+
+def main():
+    global maxScore
+    global score
+    print("Welcome to the Greek Mythology Guess Who Game!")
+    print("A random character will be selected, then it will give hints. The more hints it takes to guess the character the less points you will earn.")
+    global char
+    ranChar = random.choice(char)
+    if ranChar == "zeus":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They are one of the chilren of Rhea and Kronus.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They were the parent of most of the other Olympian gods.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: One of their symbols is the eagle.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: He is the King of the gods.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! HINT: The correct answer was Zeus!")
+                            replay()
+    elif ranChar == "hera":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: Was one of the children of Kronus and Rhea.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their symbols is the dove.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: They were married to Zeus.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: She is the queen of the gods.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! HINT: The correct answer was Hera!")
+                            replay()
+    elif ranChar == "aphrodite":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They are one of the parents of Phobos and Deimos.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their symbols are doves.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: They were married to Hephaestus.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: Another one of their symbols is seashells.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Aphrodite!")
+                            replay()    
+    elif ranChar == "apollo":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: Their dad is Zeus.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their symbols is the bow and arrow.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: Another one of their symbols is the lyre.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: They are the twin brother of Artemis.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The answer was Apollo!")
+                            replay()
+    elif ranChar == "ares":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They were one of the kids of Zeus.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: Their other parent is Hera.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: One of their symbols is the spear.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: They are the god of war.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Ares!")
+                            replay()
+    elif ranChar == "artemis":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: One of their symbols is the bow and arrow.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their parents is Leto.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: One of their symbols is the moon.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: They are the twin of Apollo.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Hera!")
+                            replay()
+    elif ranChar == "athena":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: Zeus is one of their parents.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their symbols is an owl.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: Another one of their symbols is the olive tree.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: In some versions of the story, she only has one parent.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Athena!")
+                            replay()
+    elif ranChar == "hades":
+        maxScore = maxScore + 5
+        q1 = input("One of the Olympian Gods.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. Was one of the children of Kronus and Rhea.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their symbols is the helm of darkness.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: He is one of the brother's of Zeus.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: He is the god of the underworld.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Hades!")
+                            replay()
+    elif ranChar == "hermes":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: Known for having winged boots.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They are the god of messengers and travelers.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: Zeus and Maia were his parents.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: This god is often called the herald of the gods.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Hermes!")
+                            replay()
+    elif ranChar == "poseidon":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: This was one of the children of Kronus and Rhea.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: This god is the parent of Pegasus and Orion.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: They were one of Zeus's brothers.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: His symbol is the trident.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Poseidon!")
+                            replay()
+    elif ranChar == "demeter":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: Was one of the children of Kronus and Rhea.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They are one of the parents of Persephone.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: One of their symbols is the scythe.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: She is the goddess of grain and harvest.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Demeter!")
+                            replay()
+    elif ranChar == "hephaestus":
+        maxScore = maxScore + 5
+        q1 = input("HINT: One of the Olympian Gods").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: This is one of the children of Zeus.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They are the only disabled god.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: They were thrown off Mount Olympus by their mother, Hera.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: One of his symbols is a hammer.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Hephaestus!")
+                            replay()
+    elif ranChar == "hestia":
+        maxScore = maxScore + 5
+        q1 = input("HINT: They are one of the gods.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They are the goddess of hearth.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: One of their symbols is a fireplace.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: This greek god did not have any kids.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: This god is one of the twelve Olympians.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! HINT: The correct answer was Hestia!")
+                            replay()
+    elif ranChar == "helios":
+        maxScore = maxScore + 5
+        q1 = input("HINT: Was the personification of the sun in greek mythology.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: Their parents are Hyperion and Theia.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They are also the god of sight.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: They are also the god of the sun.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: They are not one of the Olympians.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Helios!")
+                            replay()
+    elif ranChar == "hercules":
+        maxScore = maxScore + 5
+        q1 = input("HINT: Is not one of the Olypians.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They are one of the kids of Zeus.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: He was not born as a god, but later became a god.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT:  They are the god of strength.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: Their greek name is Heracles, while there roman name is more well known(and the answer!).").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Hercules!")
+                            replay()
+    elif ranChar == "helen":
+        maxScore = maxScore + 5
+        q1 = input("HINT: Zeus is one of their parents. ").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They indirectly caused the trojan war.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: This person was originally from Sparta while many people think that they were from Troy.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: Their other parent was Leda(In most accounts).").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: She was married to the king of Sparta.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Helen(Of Troy)!")
+                            replay()
+    elif ranChar == "jason":
+        maxScore = maxScore + 5
+        q1 = input("HINT: This person led the Argonauts.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: This person was married to Medea.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: He obtained the golden fleece.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: Was the son of Aeson.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: This person is known for missing one sandal.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Jason!")
+                            replay()
+    elif ranChar == "orion":
+        maxScore = maxScore + 5
+        q1 = input("HINT: They are known for being a hunter.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: They are also a son of Poseidon.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They also had the ability to walk in water.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: They were killed by Artermis.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: Some stories say that he was banished to the sky.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Orion!")
+                            replay()
+    elif ranChar == "perseus":
+        maxScore = maxScore + 5
+        q1 = input("HINT: They are one of the children of Zeus.").lower()
+        if q1 == ranChar:
+            score = score + 5 
+            print("Correct!")
+            replay()
+        else:
+            q1 = input("Incorrect. HINT: THis charecter is not one of the Olympians.").lower()
+            if q1 == ranChar:
+                score = score + 4
+                print("Correct!")
+                replay()
+            else: 
+                q1 = input("Incorrect. HINT: They killed Medusa.").lower()
+                if q1 == ranChar:
+                    score = score + 3
+                    print("Correct!")
+                    replay()
+                else:
+                    q1 = input("Incorrect. HINT: Their other parent is Danae.").lower()
+                    if q1 == ranChar:
+                        score = score + 2
+                        print("Correct!")
+                        replay()
+                    else:
+                        q1 = input("Incorrect. HINT: They were mortal, meaning not a god.").lower()
+                        if q1 == ranChar:
+                            score = score + 1
+                            print("Correct!")
+                            replay()
+                        else:
+                            print("Incorrect! The correct answer was Perseus!")
+                            replay()
+main()
